@@ -1,0 +1,37 @@
+# Default configuration for MemAgent
+
+agent:
+  model_name: "local_model"  # Will be set when model is downloaded
+  sleep_episode_interval: 150
+  max_episodes_per_task: 1000
+  action_timeout: 10.0  # seconds
+
+environment:
+  headless: true
+  browser: "chromium"
+  viewport_width: 1280
+  viewport_height: 720
+  navigation_timeout: 30000  # milliseconds
+
+memory:
+  faiss_index_dim: 384  # sentence-transformers default
+  k_neighbors: 5
+  embedding_model: "all-MiniLM-L6-v2"  # Fast, local embeddings
+  index_path: "data/faiss_indexes/episodic_memory.index"
+
+world_model:
+  hidden_dim: 512
+  num_layers: 3
+  learning_rate: 1e-4
+  batch_size: 32
+  checkpoint_path: "data/checkpoints/world_model.pt"
+
+episodes:
+  buffer_size: 1000
+  save_path: "data/episodes/"
+  reflection_path: "data/reflections/"
+
+logging:
+  level: "INFO"
+  log_file: "logs/agent.log"
+
