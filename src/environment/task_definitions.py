@@ -12,6 +12,7 @@ class TaskType(Enum):
     SORT_SELECT = "sort_select"
     NAV_TOGGLE = "nav_toggle"
     ERROR_RECOVERY = "error_recovery"
+    ALFWORLD = "alfworld"  # ALFWorld text-based interactive task
 
 
 @dataclass
@@ -27,7 +28,10 @@ class Task:
     
     def __post_init__(self):
         """Validate task."""
-        if not self.url.startswith(("http://", "https://")):
+        # Allow http/https URLs for web tasks, and alfworld:// for ALFWorld tasks
+        if not (self.url.startswith(("http://", "https://")) or 
+                self.url.startswith("alfworld://") or
+                self.task_type == TaskType.ALFWORLD):
             raise ValueError(f"Invalid URL: {self.url}")
 
 
@@ -177,5 +181,41 @@ class TaskDefinition:
             goal=goal,
             url=url,
             success_criteria=success_criteria
+        )
+    
+    @staticmethod
+    def create_alfworld_task(
+        task_id: str,
+        description: str,
+        goal: str,
+        pddl_goal: Optional[str] = None,
+        success_criteria: Optional[Dict[str, Any]] = None
+    ) -> Task:
+        """Create an ALFWorld text-based interactive task.
+        
+        Args:
+            task_id: Unique task identifier
+            description: Human-readable task description
+            goal: Natural language goal (e.g., "examine an alarmclock with the desklamp")
+            pddl_goal: Optional PDDL goal specification
+            success_criteria: Optional success criteria dict
+            
+        Returns:
+            Task object
+        """
+        if success_criteria is None:
+            success_criteria = {
+                "type": "alfworld_completion",
+                "goal": goal
+            }
+        
+        return Task(
+            task_id=task_id,
+            task_type=TaskType.ALFWORLD,
+            description=description,
+            goal=goal,
+            url="alfworld://task",  # Fake URL for compatibility
+            success_criteria=success_criteria,
+            initial_state={"pddl_goal": pddl_goal} if pddl_goal else None
         )
 

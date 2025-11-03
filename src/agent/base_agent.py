@@ -4,6 +4,7 @@ from typing import Dict, Any, Optional, List
 import logging
 
 from ..environment.web_env import WebEnvironment
+from ..environment.alfworld_env import ALFWorldEnvironment
 from ..environment.task_definitions import Task
 from ..environment.state_encoder import WebState, StateEncoder
 from ..memory.episode_buffer import EpisodeBuffer
@@ -12,6 +13,8 @@ from ..memory.world_model import WorldModel
 from .reflection import ReflectionSystem
 from .action_selector import ActionSelector
 from ..utils.config import Config
+from ..utils.llama_model import create_llama_callback
+import os
 
 
 logger = logging.getLogger(__name__)
@@ -29,19 +32,58 @@ class BaseAgent:
         
         Args:
             config: Configuration object
-            llm_callback: Optional callback for LLM inference
+            llm_callback: Optional callback for LLM inference.
+                         If None and config.llm.enabled is True, will auto-initialize Llama model.
         """
         self.config = config
+        
+        # Auto-initialize Llama if configured
+        if llm_callback is None and config.llm.enabled:
+            logger.info("Auto-initializing Llama model from config...")
+            # Get auth token from environment or config
+            auth_token = config.llm.use_auth_token or os.getenv("HUGGINGFACE_TOKEN")
+            if not auth_token:
+                logger.warning(
+                    "Hugging Face token not found. Set HUGGINGFACE_TOKEN env var "
+                    "or config.llm.use_auth_token. You need to accept the license at "
+                    "https://huggingface.co/meta-llama/Llama-3.1-8B first."
+                )
+            
+            try:
+                llm_callback = create_llama_callback(
+                    model_name=config.llm.model_name,
+                    device=config.llm.device,
+                    use_quantization=config.llm.use_quantization,
+                    use_auth_token=auth_token,
+                    max_new_tokens=config.llm.max_new_tokens,
+                    temperature=config.llm.temperature,
+                    do_sample=config.llm.do_sample
+                )
+                logger.info("Llama model initialized successfully")
+            except Exception as e:
+                logger.error(f"Failed to initialize Llama model: {e}")
+                logger.info("Falling back to no LLM callback")
+                llm_callback = None
+        
         self.llm_callback = llm_callback
         
-        # Initialize components
-        self.env = WebEnvironment(
-            headless=config.environment.headless,
-            browser=config.environment.browser,
-            viewport_width=config.environment.viewport_width,
-            viewport_height=config.environment.viewport_height,
-            navigation_timeout=config.environment.navigation_timeout
-        )
+        # Initialize environment based on configuration
+        if config.alfworld.enabled:
+            logger.info("Initializing ALFWorld environment...")
+            self.env = ALFWorldEnvironment(
+                env_type=config.alfworld.env_type,
+                data_dir=config.alfworld.data_dir,
+                train_eval=config.alfworld.train_eval
+            )
+        else:
+            logger.info("Initializing Web environment...")
+            self.env = WebEnvironment(
+                headless=config.environment.headless,
+                browser=config.environment.browser,
+                viewport_width=config.environment.viewport_width,
+                viewport_height=config.environment.viewport_height,
+                navigation_timeout=config.environment.navigation_timeout
+            )
         
         self.state_encoder = StateEncoder()
         

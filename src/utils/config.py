@@ -52,6 +52,26 @@ class LoggingConfig(BaseModel):
     log_file: str = "logs/agent.log"
 
 
+class LLMConfig(BaseModel):
+    """LLM model configuration."""
+    model_name: str = "meta-llama/Llama-3.1-8B"
+    enabled: bool = False  # Set to True to auto-initialize Llama model
+    device: Optional[str] = None  # None for auto-detect
+    use_quantization: bool = True  # Use 4-bit quantization (CUDA only)
+    use_auth_token: Optional[str] = None  # Hugging Face token (get from env or set here)
+    max_new_tokens: int = 512
+    temperature: float = 0.7
+    do_sample: bool = True
+
+
+class ALFWorldConfig(BaseModel):
+    """ALFWorld environment configuration."""
+    enabled: bool = False  # Set to True to use ALFWorld instead of web environment
+    env_type: str = "AlfredTWEnv"  # Options: AlfredTWEnv, AlfredThorEnv, AlfredHybrid
+    data_dir: Optional[str] = None  # None for default ~/.cache/alfworld/
+    train_eval: str = "train"  # train or eval split
+
+
 class Config(BaseModel):
     """Main configuration object."""
     agent: AgentConfig = Field(default_factory=AgentConfig)
@@ -60,6 +80,8 @@ class Config(BaseModel):
     world_model: WorldModelConfig = Field(default_factory=WorldModelConfig)
     episodes: EpisodesConfig = Field(default_factory=EpisodesConfig)
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
+    llm: LLMConfig = Field(default_factory=LLMConfig)
+    alfworld: ALFWorldConfig = Field(default_factory=ALFWorldConfig)
 
     @classmethod
     def from_yaml(cls, config_path: str) -> "Config":

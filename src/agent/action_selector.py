@@ -260,8 +260,55 @@ Action:"""
         Returns:
             Selected action dictionary
         """
-        # Try to extract action number
         import re
+        
+        # Check if this is an ALFWorld text command task
+        is_alfworld = any(
+            action.get("type") == "text_command" 
+            for action in available_actions
+        )
+        
+        if is_alfworld:
+            # For ALFWorld, try to extract the command directly from response
+            response_lower = response.strip().lower()
+            
+            # Try to match against available commands
+            for action in available_actions:
+                cmd = action.get("command", "").lower()
+                if cmd and cmd in response_lower:
+                    return action
+            
+            # If no match, try to extract command-like text from response
+            # Common ALFWorld commands: "go to", "take", "open", "put", "examine"
+            command_patterns = [
+                r'(go to [^\.\n]+)',
+                r'(take [^\.\n]+)',
+                r'(open [^\.\n]+)',
+                r'(put [^\.\n]+)',
+                r'(examine [^\.\n]+)',
+                r'(use [^\.\n]+)',
+                r'(look [^\.\n]*)',
+            ]
+            
+            for pattern in command_patterns:
+                match = re.search(pattern, response_lower)
+                if match:
+                    command = match.group(1).strip()
+                    return {
+                        "type": "text_command",
+                        "command": command,
+                        "text": command
+                    }
+            
+            # Fallback: use response as-is if it looks like a command
+            if len(response.strip()) < 100 and not response.strip().startswith("{"):
+                return {
+                    "type": "text_command",
+                    "command": response.strip(),
+                    "text": response.strip()
+                }
+        
+        # Try to extract action number
         numbers = re.findall(r'\d+', response)
         if numbers:
             action_idx = int(numbers[0]) - 1

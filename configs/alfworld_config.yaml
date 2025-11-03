@@ -1,0 +1,60 @@
+# ALFWorld Configuration File
+# Based on ALFWorld's expected structure
+
+general:
+  training_method: dagger
+  seed: null
+  verbose: false
+
+env:
+  type: AlfredTWEnv
+  data_dir: ~/.cache/alfworld  # ALFWorld data directory
+  num_processes: 1
+  goal_desc_human_anns_prob: 0.0
+  goal_desc_human_anns_path: null
+  save_period: 100
+  debug: false
+  seed: null
+  max_fails: 10
+  max_steps: 500
+  reward_shaping: true
+  progress_type: reward
+  verbose: false
+  task_types:
+    - 1  # pick_and_place_simple
+    - 3  # pick_clean_then_place_in_recep
+    - 6  # pick_two_obj_and_place
+    - 2  # look_at_obj_in_light
+  reward_type: dense
+  action_space: full
+  forward_model_applied: true
+  forward_model_max_steps: 5
+  randomize: true
+  domain_randomization: false
+  expert_type: human
+
+dataset:
+  data_path: ~/.cache/alfworld/json_2.1.1  # Path to JSON data directory
+  num_train_games: 0  # 0 means use all available
+  splits:
+    train:
+      - train
+    valid_unseen:
+      - valid_unseen
+    valid_seen:
+      - valid_seen
+    eval:
+      - eval
+
+dagger:
+  training:
+    max_nb_steps_per_episode: 50
+    nb_rollout_steps: 5
+    update_freq: 10
+    batch_size: 32
+    learning_rate: 1e-4
+    weight_decay: 1e-5
+  expert:
+    type: human
+    path: null
+

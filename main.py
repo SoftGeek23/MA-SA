@@ -11,29 +11,48 @@ from src.environment.task_definitions import TaskDefinition, TaskType
 from src.training.world_model_trainer import train_world_model
 
 
-def create_example_tasks() -> list:
-    """Create example tasks for testing."""
+def create_example_tasks(config) -> list:
+    """Create example tasks based on environment type."""
     task_def = TaskDefinition()
     
-    tasks = [
-        # Example search+click task
-        task_def.create_search_click_task(
-            task_id="search_click_1",
-            description="Search and click example",
-            url="https://example.com",
-            search_query="test query",
-            target_element="button#search"
-        ),
-        
-        # Example form-fill task
-        task_def.create_form_fill_task(
-            task_id="form_fill_1",
-            description="Form filling example",
-            url="https://example.com/form",
-            form_fields={"name": "Test User", "email": "test@example.com"},
-            submit_button="button[type='submit']"
-        ),
-    ]
+    if config.alfworld.enabled:
+        # ALFWorld text-based tasks
+        tasks = [
+            # Example ALFWorld task from the website demo
+            task_def.create_alfworld_task(
+                task_id="alfworld_1",
+                description="Examine alarmclock with desklamp",
+                goal="examine an alarmclock with the desklamp"
+            ),
+            
+            # Another example task
+            task_def.create_alfworld_task(
+                task_id="alfworld_2",
+                description="Pick and place task",
+                goal="pick up a mug and put it in the microwave"
+            ),
+        ]
+    else:
+        # Web-based tasks
+        tasks = [
+            # Example search+click task
+            task_def.create_search_click_task(
+                task_id="search_click_1",
+                description="Search and click example",
+                url="https://example.com",
+                search_query="test query",
+                target_element="button#search"
+            ),
+            
+            # Example form-fill task
+            task_def.create_form_fill_task(
+                task_id="form_fill_1",
+                description="Form filling example",
+                url="https://example.com/form",
+                form_fields={"name": "Test User", "email": "test@example.com"},
+                submit_button="button[type='submit']"
+            ),
+        ]
     
     return tasks
 
@@ -120,11 +139,16 @@ def main():
         
     else:
         # Run mode
-        agent = BaseAgent(config, llm_callback=dummy_llm_callback)
+        agent = BaseAgent(config, llm_callback=None)
         
         try:
-            # Create example tasks
-            tasks = create_example_tasks()
+            # Create example tasks based on configuration
+            tasks = create_example_tasks(config)
+            
+            if config.alfworld.enabled:
+                logger.info(f"Running {len(tasks)} ALFWorld tasks")
+            else:
+                logger.info(f"Running {len(tasks)} web tasks")
             
             # Run tasks
             for task in tasks:

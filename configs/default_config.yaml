@@ -35,3 +35,19 @@ logging:
   level: "INFO"
   log_file: "logs/agent.log"
 
+llm:
+  model_name: "meta-llama/Llama-3.1-8B"
+  enabled: true  # Set to true to auto-initialize Llama model
+  device: null  # null for auto-detect (cuda/cpu)
+  use_quantization: true  # Use 4-bit quantization (CUDA only)
+  use_auth_token: null  # Set Hugging Face token here or use HUGGINGFACE_TOKEN env var
+  max_new_tokens: 512
+  temperature: 0.7
+  do_sample: true
+
+alfworld:
+  enabled: true  # Set to true to use ALFWorld environment instead of web
+  env_type: "AlfredTWEnv"  # Options: AlfredTWEnv, AlfredThorEnv, AlfredHybrid
+  data_dir: null  # null for default ~/.cache/alfworld/
+  train_eval: "train"  # train or eval split
+
