@@ -1,0 +1,483 @@
+{
+  "episode_id": "ep_000009_task_search_click_1",
+  "task_id": "search_click_1",
+  "step": 10,
+  "state": {
+    "url": "https://www.iana.org/about",
+    "dom_tree": "Interactive elements: [\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Domains\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocols\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Numbers\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"About\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Domain Names\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Number Resources\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocol Assignments\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Public Technical Identifiers\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"ICANN\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Introduction\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"News\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Performance\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Audits\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Excellence & Quality\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Archive\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Contact us\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Domain\u00a0Names\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Root Zone Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".INT Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".ARPA Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"IDN Repository\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Number\u00a0Resources\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Abuse Information\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocols\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocol Registries\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Time Zone Database\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"About\u00a0Us\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"News\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Performance\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Excellence\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Archive\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Contact Us\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Public Technical Identifiers\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"ICANN\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Privacy Policy\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Terms of Service\",\n    \"selector\": \"a\"\n  }\n]",
+    "task_context": {
+      "task_id": "search_click_1",
+      "task_type": "search_click",
+      "current_url": "https://www.iana.org/about",
+      "title": "About us"
+    },
+    "goal": "Search for 'test query' and click on 'button#search'",
+    "available_actions": [
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Domains",
+        "index": 1
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocols",
+        "index": 2
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Numbers",
+        "index": 3
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "About",
+        "index": 4
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Domain Names",
+        "index": 5
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Number Resources",
+        "index": 6
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocol Assignments",
+        "index": 7
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Public Technical Identifiers",
+        "index": 8
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "ICANN",
+        "index": 9
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Introduction",
+        "index": 10
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "News",
+        "index": 11
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Performance",
+        "index": 12
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Audits",
+        "index": 13
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Excellence & Quality",
+        "index": 14
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Archive",
+        "index": 15
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Contact us",
+        "index": 16
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Domain\u00a0Names",
+        "index": 17
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Root Zone Registry",
+        "index": 18
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".INT Registry",
+        "index": 19
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".ARPA Registry",
+        "index": 20
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "IDN Repository",
+        "index": 21
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Number\u00a0Resources",
+        "index": 22
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Abuse Information",
+        "index": 23
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocols",
+        "index": 24
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocol Registries",
+        "index": 25
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Time Zone Database",
+        "index": 26
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "About\u00a0Us",
+        "index": 27
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "News",
+        "index": 28
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Performance",
+        "index": 29
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Excellence",
+        "index": 30
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Archive",
+        "index": 31
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Contact Us",
+        "index": 32
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Public Technical Identifiers",
+        "index": 33
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "ICANN",
+        "index": 34
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Privacy Policy",
+        "index": 35
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Terms of Service",
+        "index": 36
+      }
+    ],
+    "timestamp": 1762121934.1561449
+  },
+  "action": {
+    "type": "click",
+    "selector": "a",
+    "text": "Domains",
+    "index": 1
+  },
+  "next_state": {
+    "url": "https://www.iana.org/",
+    "dom_tree": "Interactive elements: [\n  {\n    \"tag\": \"button\",\n    \"id\": \"\",\n    \"className\": \"gsc-search-button gsc-search-button-v2\",\n    \"text\": \"leita\",\n    \"selector\": \"button.gsc-search-button\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"avoid-break\",\n    \"text\": \"Learn more.\",\n    \"selector\": \"a.avoid-break\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Domain Names\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Root Zone Management\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Database of Top Level Domains\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".int Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".arpa Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"IDN Practices Repository\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Number Resources\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"IP Addresses & AS Numbers\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Network abuse information\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocol Assignments\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocol Registries\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Apply for an assignment\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Time Zone Database\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"gsst_a\",\n    \"text\": \"\u00d7\",\n    \"selector\": \"a.gsst_a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Domain Names\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Root Zone Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".INT Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \".ARPA Registry\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"IDN Repository\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Number Resources\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Abuse Information\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocols\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Protocol Registries\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Time Zone Database\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"About Us\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"News\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Performance\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Excellence\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Archive\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Contact Us\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Public Technical Identifiers\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"ICANN\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Privacy Policy\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"\",\n    \"text\": \"Terms of Service\",\n    \"selector\": \"a\"\n  },\n  {\n    \"tag\": \"input\",\n    \"id\": \"gsc-i-id1\",\n    \"className\": \"gsc-input\",\n    \"text\": \"\",\n    \"selector\": \"input#gsc-i-id1.gsc-input\"\n  },\n  {\n    \"tag\": \"a\",\n    \"id\": \"\",\n    \"className\": \"gsst_a\",\n    \"text\": \"\u00d7\",\n    \"selector\": \"a.gsst_a\"\n  }\n]",
+    "task_context": {
+      "task_id": "search_click_1",
+      "task_type": "search_click",
+      "current_url": "https://www.iana.org/",
+      "title": "Internet Assigned Numbers Authority"
+    },
+    "goal": "Search for 'test query' and click on 'button#search'",
+    "available_actions": [
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Learn more.",
+        "index": 0
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Domain Names",
+        "index": 1
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Root Zone Management",
+        "index": 2
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Database of Top Level Domains",
+        "index": 3
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".int Registry",
+        "index": 4
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".arpa Registry",
+        "index": 5
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "IDN Practices Repository",
+        "index": 6
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Number Resources",
+        "index": 7
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "IP Addresses & AS Numbers",
+        "index": 8
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Network abuse information",
+        "index": 9
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocol Assignments",
+        "index": 10
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocol Registries",
+        "index": 11
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Apply for an assignment",
+        "index": 12
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Time Zone Database",
+        "index": 13
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "\u00d7",
+        "index": 14
+      },
+      {
+        "type": "click",
+        "selector": "button",
+        "text": "leita",
+        "index": 15
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Domain Names",
+        "index": 16
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Root Zone Registry",
+        "index": 17
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".INT Registry",
+        "index": 18
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": ".ARPA Registry",
+        "index": 19
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "IDN Repository",
+        "index": 20
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Number Resources",
+        "index": 21
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Abuse Information",
+        "index": 22
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocols",
+        "index": 23
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Protocol Registries",
+        "index": 24
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Time Zone Database",
+        "index": 25
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "About Us",
+        "index": 26
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "News",
+        "index": 27
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Performance",
+        "index": 28
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Excellence",
+        "index": 29
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Archive",
+        "index": 30
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Contact Us",
+        "index": 31
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Public Technical Identifiers",
+        "index": 32
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "ICANN",
+        "index": 33
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Privacy Policy",
+        "index": 34
+      },
+      {
+        "type": "click",
+        "selector": "a",
+        "text": "Terms of Service",
+        "index": 35
+      },
+      {
+        "type": "type",
+        "selector": "input[name=\"search\"]",
+        "placeholder": "",
+        "name": "search",
+        "index": 0
+      }
+    ],
+    "timestamp": 1762121935.159266
+  },
+  "outcome": {
+    "success": true,
+    "error": null
+  },
+  "timestamp": 1762121935.1595147
+}

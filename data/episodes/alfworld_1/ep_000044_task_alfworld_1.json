@@ -1,0 +1,59 @@
+{
+  "episode_id": "ep_000044_task_alfworld_1",
+  "task_id": "alfworld_1",
+  "step": 45,
+  "state": {
+    "url": "alfworld://alfworld_1",
+    "dom_tree": "On the bed 1, you see a book 2, a book 1, a cellphone 2, a pillow 2, and a pillow 1.",
+    "task_context": {
+      "task_id": "alfworld_1",
+      "task_type": "alfworld",
+      "current_location": "unknown location",
+      "observation_length": 84
+    },
+    "goal": "examine an alarmclock with the desklamp",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "examine bed 1",
+        "index": 0,
+        "text": "examine bed 1"
+      }
+    ],
+    "timestamp": 1762127223.3892128
+  },
+  "action": {
+    "type": "text_command",
+    "command": "examine bed 1",
+    "index": 0,
+    "text": "examine bed 1"
+  },
+  "next_state": {
+    "url": "alfworld://alfworld_1",
+    "dom_tree": "On the bed 1, you see a book 2, a book 1, a cellphone 2, a pillow 2, and a pillow 1.",
+    "task_context": {
+      "task_id": "alfworld_1",
+      "task_type": "alfworld",
+      "current_location": "unknown location",
+      "observation_length": 84
+    },
+    "goal": "examine an alarmclock with the desklamp",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "examine bed 1",
+        "index": 0,
+        "text": "examine bed 1"
+      }
+    ],
+    "timestamp": 1762127250.4624605
+  },
+  "outcome": {
+    "success": true,
+    "error": null,
+    "reward": 0.0,
+    "done": false,
+    "observation": "On the bed 1, you see a book 2, a book 1, a cellphone 2, a pillow 2, and a pillow 1."
+  },
+  "timestamp": 1762127250.4624958
+}

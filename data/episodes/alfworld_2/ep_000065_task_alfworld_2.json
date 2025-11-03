@@ -1,0 +1,58 @@
+{
+  "episode_id": "ep_000065_task_alfworld_2",
+  "task_id": "alfworld_2",
+  "step": 16,
+  "state": {
+    "url": "alfworld://alfworld_2",
+    "dom_tree": "On the bathtubbasin 1, you see nothing.",
+    "task_context": {
+      "task_id": "alfworld_2",
+      "task_type": "alfworld",
+      "current_location": "unknown location",
+      "observation_length": 39
+    },
+    "goal": "pick up a mug and put it in the microwave",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "examine bathtubbasin 1",
+        "index": 0,
+        "text": "examine bathtubbasin 1"
+      }
+    ],
+    "timestamp": 1762127543.391402
+  },
+  "action": {
+    "type": "text_command",
+    "command": "1",
+    "text": "1"
+  },
+  "next_state": {
+    "url": "alfworld://alfworld_2",
+    "dom_tree": "Nothing happens.",
+    "task_context": {
+      "task_id": "alfworld_2",
+      "task_type": "alfworld",
+      "current_location": "unknown location",
+      "observation_length": 16
+    },
+    "goal": "pick up a mug and put it in the microwave",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "examine bathtubbasin 1",
+        "index": 0,
+        "text": "examine bathtubbasin 1"
+      }
+    ],
+    "timestamp": 1762127543.7022877
+  },
+  "outcome": {
+    "success": true,
+    "error": null,
+    "reward": 0.0,
+    "done": false,
+    "observation": "Nothing happens."
+  },
+  "timestamp": 1762127543.7023191
+}

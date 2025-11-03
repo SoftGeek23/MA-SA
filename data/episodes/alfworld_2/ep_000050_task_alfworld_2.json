@@ -1,0 +1,59 @@
+{
+  "episode_id": "ep_000050_task_alfworld_2",
+  "task_id": "alfworld_2",
+  "step": 1,
+  "state": {
+    "url": "alfworld://alfworld_2",
+    "dom_tree": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a shelf 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.\n\nYour task is to: put a clean soapbar in cabinet.",
+    "task_context": {
+      "task_id": "alfworld_2",
+      "task_type": "alfworld",
+      "current_location": "You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a shelf 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.",
+      "observation_length": 413
+    },
+    "goal": "pick up a mug and put it in the microwave",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "go to bathtubbasin 1",
+        "index": 0,
+        "text": "go to bathtubbasin 1"
+      }
+    ],
+    "timestamp": 1762127286.0093343
+  },
+  "action": {
+    "type": "text_command",
+    "command": "go to bathtubbasin 1",
+    "index": 0,
+    "text": "go to bathtubbasin 1"
+  },
+  "next_state": {
+    "url": "alfworld://alfworld_2",
+    "dom_tree": "You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing.",
+    "task_context": {
+      "task_id": "alfworld_2",
+      "task_type": "alfworld",
+      "current_location": "You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing.",
+      "observation_length": 69
+    },
+    "goal": "pick up a mug and put it in the microwave",
+    "available_actions": [
+      {
+        "type": "text_command",
+        "command": "examine bathtubbasin 1",
+        "index": 0,
+        "text": "examine bathtubbasin 1"
+      }
+    ],
+    "timestamp": 1762127289.508023
+  },
+  "outcome": {
+    "success": true,
+    "error": null,
+    "reward": 0.0,
+    "done": false,
+    "observation": "You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing."
+  },
+  "timestamp": 1762127289.5080578
+}
